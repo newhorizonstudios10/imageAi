@@ -54,12 +54,7 @@ const MobileNav = () => {
                     key={link.route}
                     >
                     <Link className="sidebar-link cursor-pointer" href={link.route}>
-                      <Image 
-                        src={link.icon}
-                        alt="logo"
-                        width={24}
-                        height={24}
-                      />
+                     
                       {link.label}
                     </Link>
                   </li>

@@ -62,8 +62,8 @@ export async function POST(req: Request) {
       lastName: last_name,
       photo: image_url,
     };
-    const User = (await auth());
-
+    const User = await createUser;
+    console.log("user created:${user}")
     // Set public metadata
     publicMetadata: {
         User;
@@ -80,8 +80,8 @@ export async function POST(req: Request) {
       photo: image_url,
     };
 
-    const UpdateUser = (await auth());
-
+    const UpdateUser = updateUser;
+    console.log("user updated:${user}")
     return NextResponse.json({ message: "OK", user: UpdateUser });
   }
   if (eventType === "user.deleted") {
@@ -92,7 +92,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "OK", user: deletedUser });
   }
   console.log(`Webhook with and ID of ${id} and type of ${eventType}`);
-  console.log("Webhook body:", body);
+  console.log("Webhook body: ", body);
 
   return new Response("", { status: 200 });
   }

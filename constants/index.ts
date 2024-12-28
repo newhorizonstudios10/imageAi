@@ -1,8 +1,8 @@
 export const navLinks = [
     {
-      label: "Home",
+      label: "CPX SURVEYS",
       route: "/",
-      icon: "/assets/icons/home.svg",
+      icon: "",
     },
     {
       label: "Image Restore",
@@ -30,7 +30,7 @@ export const navLinks = [
       icon: "/assets/icons/camera.svg",
     },
     {
-      label: "Profile",
+      label: "Withdraw",
       route: "/profile",
       icon: "/assets/icons/profile.svg",
     },
